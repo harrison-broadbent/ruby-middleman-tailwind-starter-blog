@@ -13,7 +13,12 @@ end
 page "/*.xml", layout: false
 page "/*.json", layout: false
 page "/*.txt", layout: false
-page "/*.md", :layout => "markdown"
+
+# Middleman doesn't support per-filetype layouts
+markdown_pages = ["about"]
+markdown_pages.each do |pge|
+  page "/#{pge}.html", :layout => "markdown_layout"
+end
 
 #-------------#
 

@@ -9,7 +9,8 @@
     <%= stylesheet_link_tag "code_highlighting" %>
     <%= javascript_include_tag "site" %>
   </head>
-  <body class="max-w-4xl mx-auto flex flex-col h-full p-2 sm:p-8 prose">
+  <body class="max-w-3xl mx-auto flex flex-col h-full p-2 sm:p-8 mt-12">
+    <%= partial "partials/menu" %>
     <%= yield %>
   </body>
 </html>
