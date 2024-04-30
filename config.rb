@@ -1,6 +1,7 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+activate :directory_indexes # for pretty URLs
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -9,9 +10,20 @@ end
 # https://middlemanapp.com/basics/layouts/
 
 # Per-page layout changes
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+page "/*.xml", layout: false
+page "/*.json", layout: false
+page "/*.txt", layout: false
+page "/*.md", :layout => "markdown"
+
+#-------------#
+
+# MARKDOWN
+#
+activate :syntax
+set :markdown_engine, :kramdown
+set :markdown, input: "GFM", smartypants: true, format: :html5
+
+#-------------#
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'

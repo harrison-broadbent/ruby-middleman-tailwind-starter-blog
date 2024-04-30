@@ -1,15 +1,14 @@
 <!doctype html>
-<html class="bg-stone-50 font-sans text-sm text-stone-700">
+<html class="bg-red-500 font-sans text-sm text-stone-700">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %> · Ruby+Middleman+Tailwind Starter Kit</title>
     <%= stylesheet_link_tag "tailwind" %>
-    <%= stylesheet_link_tag "code_highlighting" %>
     <%= javascript_include_tag "site" %>
   </head>
-  <body class="max-w-4xl mx-auto flex flex-col h-full p-2 sm:p-8 prose">
+  <body class="max-w-4xl mx-auto flex flex-col h-full p-2 sm:p-8">
     <%= yield %>
   </body>
 </html>
