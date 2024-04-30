@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+  @apply underline text-stone-600 hover:text-stone-500 after:content-['_↗'];
+}
