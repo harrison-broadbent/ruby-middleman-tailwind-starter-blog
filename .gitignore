@@ -3,3 +3,6 @@
 .DS_Store
 .sass-cache
 build/
+
+# node deps
+node_modules/*
