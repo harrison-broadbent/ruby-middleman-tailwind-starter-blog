@@ -2,12 +2,20 @@
 title: Welcome!
 ---
 <div class="flex flex-col space-y-6">
-  <h1 class="text-5xl font-bold">
+  <h1 class="text-stone-900 text-5xl font-bold">
     Welcome to the Ruby + Middleman + TailwindCSS Starter Blog.
   </h1>
-  <p>Welcome to this little starter blog kit I've put together. I've used Middleman for years to build my <a href="https://harrisonbroadbent.com/stack" target="_blank">personal site</a> and I've always loved it's simplicity.</p>
+  <p>Welcome to this starter blog kit! I've used Middleman for years to build my <a href="https://harrisonbroadbent.com/stack" target="_blank">personal site</a> and I've always loved it's simplicity.</p>
+  <p>This template includes the following:</p>
+  <ul class="list-disc ml-6">
+    <li>Middleman</li>
+    <li>TailwindCSS</li>
+    <li>Blogging support (via middleman-blog)</li>
+    <li>Markdown processing (via Kramdown)</li>
+    <li>Markdown code highlighting (via Rouge)</li>
+  </ul>
   <%= link_to(
-  "Read Documentation",
+  "Middleman Docs",
   "https://middlemanapp.com/basics/templating_language/",
   target: "_blank"
 ) %>
