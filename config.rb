@@ -7,10 +7,11 @@ activate :autoprefixer do |prefix|
 end
 
 activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.sources = "{title}.html"
-  blog.default_extension = ".md"
-  blog.layout = "markdown_layout"
+  blog.prefix = "blog" 							 # directory prefix
+  blog.sources = "{title}.html" 		# filename glob
+  blog.default_extension = ".md" 		# file extension
+  blog.layout = "markdown_layout" 	# layout from source/layouts
+  blog.permalink = "{title}.html"   # format of the URLs middleman generates
 end
 
 # Layouts
@@ -33,7 +34,7 @@ end
 #
 activate :syntax
 set :markdown_engine, :kramdown
-set :markdown, input: "GFM", smartypants: true, format: :html5, auto_ids: true
+set :markdown, input: "GFM", smartypants: true, format: :html5
 
 #-------------#
 

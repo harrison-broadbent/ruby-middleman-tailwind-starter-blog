@@ -7,12 +7,16 @@ a {
 }
 
 #prose-content {
-  @apply text-pretty;
+  @apply text-pretty prose-img:mb-2;
+}
+
+#prose-content > p > img + em {
+  @apply text-stone-500 text-sm;
 }
 
 /* code blocks (not inline!) */
-#prose-content .highlight {
-  @apply rounded-md;
+#prose-content pre.highlight {
+  @apply rounded-md bg-stone-50 border border-stone-200;
 }
 
 /*
@@ -28,7 +32,7 @@ a {
   content: "";
 }
 .prose p code {
-  @apply bg-stone-100 rounded-md py-1 px-2 border text-stone-800 font-semibold;
+  @apply bg-stone-100 rounded-md py-0.5 px-1.5 border text-stone-800 font-semibold;
 }
 
 .prose blockquote ::before {

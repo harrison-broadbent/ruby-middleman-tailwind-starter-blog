@@ -1,22 +1,24 @@
 ---
 title: Welcome!
 ---
-<div class="flex flex-col space-y-6">
-  <h1 class="text-stone-900 text-5xl font-bold">
-    Welcome to the Ruby + Middleman + TailwindCSS Starter Blog.
+<div class="flex flex-col space-y-6 text-base">
+  <h1 class="text-stone-900 text-7xl font-bold tracking-tighter">
+    Welcome to the Ruby, Middleman & TailwindCSS Starter Blog.
   </h1>
-  <p>Welcome to this starter blog kit! I've used Middleman for years to build my <a href="https://harrisonbroadbent.com/stack" target="_blank">personal site</a> and I've always loved it's simplicity.</p>
-  <p>This template includes the following:</p>
+  <p>Welcome! I love how simple Middleman is — I've used it for years to build my <a href="https://harrisonbroadbent.com/stack" target="_blank">personal site</a>, and I finally decided to pull together everything I've learned into a template. I encourage you to poke around the <a href="/blog">blog</a> and <a href="/about">about</a> pages to see what you can do with this template!</p>
+  <p>This template is setup and configured with the following:</p>
   <ul class="list-disc ml-6">
-    <li>Middleman</li>
-    <li>TailwindCSS</li>
-    <li>Blogging support (via middleman-blog)</li>
-    <li>Markdown processing (via Kramdown)</li>
-    <li>Markdown code highlighting (via Rouge)</li>
+    <li><a href="https://middlemanapp.com/">Middleman</a>,</li>
+    <li><a href="https://tailwindcss.com/">TailwindCSS</a>,</li>
+    <li>Blog support via <a href="https://middlemanapp.com/basics/blogging/">middleman-blog</a> (<a href="/blog">example</a>)</li>
+    <li>Markdown processing via <a href="https://kramdown.gettalong.org/quickref.html">kramdown</a></li>
+    <li>Markdown code highlighting via <a href="https://github.com/rouge-ruby/rouge">Rouge</a> (<a href="/blog/blog-post-with-code">example</a>)</li>
   </ul>
-  <%= link_to(
-  "Middleman Docs",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+  <p>
+    You might also like to <%= link_to(
+                                "view the Middleman Docs",
+                                "https://middlemanapp.com/basics/templating_language/",
+                                target: "_blank",
+                              ) %>
+  </p>
 </div>
