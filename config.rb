@@ -6,6 +6,13 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.sources = "{title}.html"
+  blog.default_extension = ".md"
+  blog.layout = "markdown_layout"
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -15,7 +22,7 @@ page "/*.json", layout: false
 page "/*.txt", layout: false
 
 # Middleman doesn't support per-filetype layouts
-markdown_pages = ["about"]
+markdown_pages = ["about", "blog"]
 markdown_pages.each do |pge|
   page "/#{pge}.html", :layout => "markdown_layout"
 end
@@ -26,7 +33,7 @@ end
 #
 activate :syntax
 set :markdown_engine, :kramdown
-set :markdown, input: "GFM", smartypants: true, format: :html5
+set :markdown, input: "GFM", smartypants: true, format: :html5, auto_ids: true
 
 #-------------#
 

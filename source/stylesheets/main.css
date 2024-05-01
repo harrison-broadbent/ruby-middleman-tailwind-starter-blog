@@ -5,3 +5,44 @@
 a {
   @apply underline text-stone-600 hover:text-stone-500 after:content-['_↗'];
 }
+
+#prose-content {
+  @apply text-pretty;
+}
+
+/* code blocks (not inline!) */
+#prose-content .highlight {
+  @apply rounded-md;
+}
+
+/*
+  inline code (not code blocks!)
+	we target .prose p code, rather than using prose-code:, so that we
+	only format inline code blocks.
+*/
+.prose p code::before {
+  content: "";
+}
+
+.prose p code::after {
+  content: "";
+}
+.prose p code {
+  @apply bg-stone-100 rounded-md py-1 px-2 border text-stone-800 font-semibold;
+}
+
+.prose blockquote ::before {
+  content: "";
+}
+
+.prose blockquote ::after {
+  content: "";
+}
+
+.prose blockquote * ::before {
+  content: "";
+}
+
+.prose blockquote * ::after {
+  content: "";
+}

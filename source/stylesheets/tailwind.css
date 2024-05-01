@@ -1061,14 +1061,6 @@ video {
   margin-right: auto;
 }
 
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1081,12 +1073,12 @@ video {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
+.contents {
+  display: contents;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
+.h-full {
+  height: 100%;
 }
 
 .max-w-3xl {
@@ -1106,19 +1098,16 @@ video {
        column-gap: 1rem;
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.border {
-  border-width: 1px;
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-stone-50 {
@@ -1167,6 +1156,60 @@ a::after {
 a:hover {
   --tw-text-opacity: 1;
   color: rgb(120 113 108 / var(--tw-text-opacity));
+}
+
+#prose-content {
+  text-wrap: pretty;
+}
+
+/* code blocks (not inline!) */
+
+#prose-content .highlight {
+  border-radius: 0.375rem;
+}
+
+/*
+  inline code (not code blocks!)
+	we target .prose p code, rather than using prose-code:, so that we
+	only format inline code blocks.
+*/
+
+.prose p code::before {
+  content: "";
+}
+
+.prose p code::after {
+  content: "";
+}
+
+.prose p code {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(41 37 36 / var(--tw-text-opacity));
+}
+
+.prose blockquote ::before {
+  content: "";
+}
+
+.prose blockquote ::after {
+  content: "";
+}
+
+.prose blockquote * ::before {
+  content: "";
+}
+
+.prose blockquote * ::after {
+  content: "";
 }
 
 @media (min-width: 640px) {
