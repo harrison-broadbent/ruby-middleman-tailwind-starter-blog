@@ -16,6 +16,7 @@ gem "nokogiri"                      # blog post summaries
 
 # Misc gems (from Middleman):
 #
+gem "builder"                       # supports .builder.xml for sitemap
 gem "terser", "~> 1.1"              # minifies .js files
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby, :x64_mingw]
 gem "wdm", "~> 0.1", platforms: [:mswin, :mingw, :x64_mingw]

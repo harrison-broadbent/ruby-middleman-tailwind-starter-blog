@@ -4,7 +4,7 @@ date: 2024-05-03 09:23
 description: A short breakdown of the other features I've included in this Middleman blog template.
 ---
 
-# Other features of this template (ruby-middleman-tailwind-starter-blog)
+# Other features of this template (Procfile, TailwindCSS, Extensions & Sitemaps)
 
 Here's a breakdown of the handy features I've included in this template.
 
@@ -53,3 +53,21 @@ activate :syntax                    # code highlighting
 Everything should just work. When you save a file locally, the Middleman development server will automatically reload. Syntax highlighting should work without any configuration (see [blog/blog_post_with_code](blog/blog_post_with_code) for more info).
 
 The `directory_indexes` extension is used for [pretty URLs](https://middlemanapp.com/advanced/pretty-urls/). With this activated, the URL paths Middleman generates look like `/blog` and `/about`, rather than `/blog.html` and `/about.html`.
+
+## Sitemaps
+
+I've included a sitemap at `source/sitemap.xml.builder`. This uses the `builder` gem to automatically generate a sitemap for your site:
+
+```ruby
+site_url = "https://main--ruby-middleman-tailwind-starter-blog.netlify.app"
+
+xml.instruct!
+xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+  sitemap.resources.select { |page| page.destination_path =~ /\.html/ }.each do |page|
+    xml.url do
+		...
+	end
+end
+```
+
+Make sure you update `site_url` to match the production URL of your website. You can preview your sitemap at `localhost:4567/sitemap.xml`.

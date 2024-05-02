@@ -11,6 +11,7 @@ GEM
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
     backports (3.25.0)
+    builder (3.2.4)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -137,6 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   kramdown
   kramdown-parser-gfm
   middleman (~> 4.5)
