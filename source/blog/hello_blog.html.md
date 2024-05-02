@@ -1,11 +1,12 @@
 ---
-title: Hello blog! (an overview)
+title: Hello blog! (an overview of markdown feature support)
+description: A short overview of the markdown features supported by this Middleman blog template, like markdown parsing, frontmatter, syntax-highlighted code blocks and more.
 date: 2024-05-01 09:23
 ---
 
 # Hello, blog!
 
-Welcome to this blog post! It's a short overview of some of this template's main markdown features.
+Welcome to this blog post! It's a short overview of some of this template's main features.
 
 The Middleman blog engine supports all the things you'd expect, like markdown files, frontmatter, tags and pagination ([read more](https://middlemanapp.com/basics/blogging/))
 
@@ -20,6 +21,32 @@ This template uses `kramdown` to parse markdown. It supports a bunch of handy th
 | Footnotes         | ?[^1]           |
 | Strikethrough     | ~~yep~~         |
 | Table of contents | yep (see above) |
+
+## Frontmatter
+
+Middleman supports frontmatter in markdown pages by placing a block of YAML at the start of a document, like this:
+
+```yaml
+---
+title: A page
+date: 2024-05-03
+---
+```
+
+Frontmatter can be accessed using Ruby code via `current_page.data.title`, `.date` etc. It's automatically used by the `_head_meta_tags.html.erb` partial to generate HTML `<meta>` tags.
+
+Blog pages require a `title:` and `date:` to be provided, and also support `description:`. Other markdown pages (ie: `about.html.md`) only require `title:` with an optional `description:` —
+
+```yaml
+---
+title: Blog page (source/blog/example.html.md)
+date: 2024-05-03
+description: Optional
+---
+title: Regular page (source/about.html.md)
+description: Optional
+---
+```
 
 ## Images & captions
 

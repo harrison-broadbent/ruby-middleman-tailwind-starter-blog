@@ -7,7 +7,7 @@ a {
 }
 
 #prose-content {
-  @apply text-pretty prose-img:mb-2;
+  @apply text-pretty prose-img:mb-2 prose-headings:tracking-tight;
 }
 
 #prose-content > p > img + em {

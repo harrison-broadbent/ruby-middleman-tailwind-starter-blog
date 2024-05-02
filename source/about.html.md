@@ -1,10 +1,11 @@
 ---
 title: About this template (and the author)
+description: Information about the ruby-middleman-tailwind-starter-blog project and author.
 ---
 
 # About this template (and the author)
 
-![](https://harrisonbroadbent.com/images/profile.jpg){:class="w-36"}_↑ That's me! ↑_
+![Profile picture of the author (me!)](https://harrisonbroadbent.com/images/profile.jpg){:class="w-36"}_↑ That's me! ↑_
 
 Hey, my name's Harrison, and I'm the author of this template. I've used [Middleman](https://middlemanapp.com/) for years to build my [personal site](https://harrisonbroadbent.com/about), and I figured it was time I shared what I've learned.
 

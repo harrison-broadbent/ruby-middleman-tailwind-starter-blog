@@ -1,16 +1,12 @@
 <!doctype html>
 <html class="bg-stone-50 font-sans text-sm text-stone-700">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title %> · Ruby+Middleman+Tailwind Starter Kit</title>
+    <%= partial "partials/head_meta_tags" %>
     <%= stylesheet_link_tag "tailwind" %>
     <%= stylesheet_link_tag "code_highlighting" %>
     <%= javascript_include_tag "site" %>
   </head>
-  <body class="max-w-3xl mx-auto flex flex-col h-full p-4 sm:p-8 mt-12">
+  <body class="max-w-3xl mx-auto flex flex-col h-full p-4 sm:p-8 mt-12 mb-12">
     <%= partial "partials/menu" %>
     <%= yield %>
   </body>

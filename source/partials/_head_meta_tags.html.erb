@@ -1,0 +1,11 @@
+<% @meta_tags = {
+    title: "#{current_page.data.title} · Ruby+Middleman+Tailwind Starter Kit" || "Ruby+Middleman+Tailwind Starter Kit",
+    description: current_page.data.description,
+  } %>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title><%= @meta_tags[:title] %></title>
+<meta name="title" content="<%= @meta_tags[:title] %>" />
+<meta name="description" content="<%= @meta_tags[:description] %>" />
+<%= favicon_tag "images/favicon.ico" %>

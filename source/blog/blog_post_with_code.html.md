@@ -1,6 +1,7 @@
 ---
 title: A blog post with some code
 date: 2024-05-02 09:23
+description: An example blog post showcasing the middleman-syntax plugin and code highlighting with Rouge.
 ---
 
 # A blog post with some code.
