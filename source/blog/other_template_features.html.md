@@ -1,7 +1,7 @@
 ---
 title: Other features of this template
-date: 2024-05-03 09:23
 description: A short breakdown of the other features I've included in this Middleman blog template.
+date: 2024-05-03 09:23
 ---
 
 # Other features of this template (Procfile, TailwindCSS, Extensions & Sitemaps)

@@ -10,6 +10,7 @@ activate :blog do |blog|
   blog.default_extension = ".md" 		# file extension
   blog.layout = "markdown_layout" 	# layout from source/layouts
   blog.permalink = "{title}.html"   # format of the URLs middleman generates
+  blog.publish_future_dated = true  # by default only builds posts with future dates
 end
 
 # Middleman doesn't support per-filetype layouts.
