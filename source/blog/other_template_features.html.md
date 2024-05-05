@@ -8,6 +8,11 @@ date: 2024-05-03 09:23
 
 Here's a breakdown of the handy features I've included in this template.
 
+<details class='italic' open><summary>Table of Contents</summary><aside markdown="1">
+* seed list
+{:toc}
+</aside></details>
+
 ## Procfile.dev and bin/dev
 
 Similar to Ruby on Rails, I've included a `Procfile.dev` and `bin/dev` script in this template. The `Procfile.dev` is handy for running multiple processes (since we need to run both `middleman server` and the `tailwindcss` parser).

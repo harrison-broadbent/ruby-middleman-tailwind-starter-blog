@@ -10,6 +10,11 @@ Welcome to this blog post! It's a short overview of some of this template's main
 
 The Middleman blog engine supports all the things you'd expect, like markdown files, frontmatter, tags and pagination ([read more](https://middlemanapp.com/basics/blogging/))
 
+<details class='italic' open><summary>Table of Contents</summary><aside markdown="1">
+* seed list
+{:toc}
+</aside></details>
+
 ## Markdown parsing
 
 This template uses `kramdown` to parse markdown. It supports a bunch of handy things like:

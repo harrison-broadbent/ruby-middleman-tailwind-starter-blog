@@ -6,11 +6,12 @@ end
 
 activate :blog do |blog|
   blog.prefix = "blog" 							 # directory prefix
-  blog.sources = "{title}.html" 		# filename glob
-  blog.default_extension = ".md" 		# file extension
   blog.layout = "markdown_layout" 	# layout from source/layouts
+  blog.sources = "{title}.html" 		# filename glob
   blog.permalink = "{title}.html"   # format of the URLs middleman generates
+  blog.default_extension = ".md" 		# file extension
   blog.publish_future_dated = true  # by default only builds posts with future dates
+  blog.new_article_template = File.expand_path("../source/template.erb", __FILE__)
 end
 
 # Middleman doesn't support per-filetype layouts.
@@ -37,6 +38,7 @@ set :markdown_engine, :kramdown     # md parsing
 set :markdown,                      # config for :kramdown
     input: "GFM",
     smartypants: true,
+    toc_levels: 2..6,
     format: :html5
 
 #-------------#
