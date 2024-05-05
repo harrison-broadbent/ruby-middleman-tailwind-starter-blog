@@ -38,7 +38,7 @@ set :markdown_engine, :kramdown     # md parsing
 set :markdown,                      # config for :kramdown
     input: "GFM",
     smartypants: true,
-    toc_levels: 2..6,
+    toc_levels: 2..6,               # H2->H6 appear in markdown {:toc} block
     format: :html5
 
 #-------------#
