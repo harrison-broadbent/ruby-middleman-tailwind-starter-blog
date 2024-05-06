@@ -1,3 +1,9 @@
+# Template config
+#
+set :site_title, "Ruby+Middleman+Tailwind Starter Kit" # site title for <title> meta tag
+
+# Extensions
+#
 activate :livereload                # live-reloading in dev
 activate :directory_indexes         # for pretty URLs
 activate :autoprefixer do |prefix|
