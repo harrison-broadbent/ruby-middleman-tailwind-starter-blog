@@ -4,13 +4,13 @@ A Middleman blog template configured with TailwindCSS, markdown parsing, code hi
 
 ## Features
 
-- Middleman `v4.5`,
-- TailwindCSS `v3.4.3`,
+- Middleman v4.5,
+- TailwindCSS v3.4.3,
 - Markdown support (via `kramdown`),
 - Blogging support (via `middleman-blog`),
 - Syntax highlighting support (via `middleman-syntax`),
-- `bin/dev` and live-reloading (via `middleman-livereload`),
-- Automatic sitemap.xml generation,
+- Live-reloading (via `middleman-livereload`) and `bin/dev` script,
+- Automatic `sitemap.xml` generation,
 - SEO-friendly automatic meta tags for `title` and `description`,
 - Perfect [100/100 PageSpeed score](https://pagespeed.web.dev/analysis/https-main--ruby-middleman-tailwind-starter-blog-netlify-app/o3pfqkngtp?form_factor=desktop) (near perfect for mobile)
 - Github Action for image compression (see `compress_images.yml`).
