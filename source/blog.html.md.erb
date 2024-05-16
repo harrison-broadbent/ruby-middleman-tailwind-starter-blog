@@ -5,17 +5,10 @@ description: A Middleman blog powered by the "middleman-blog" gem.
 
 # Blog (the,)
 
-Welcome to the blog. It's powered by the `middleman-blog` gem, alongside markdown files.
+Welcome to the blog! It's powered by the `middleman-blog` gem and `.md` documents.
 
 This is the index page, located at `source/blog.html.md.erb`. The blog extension itself is configured (within `config.rb`) to look inside `source/blog` for individual articles.
 
 Here are some example articles —
 
-<ul>
-  <% blog.articles.each do |article| %>
-    <li class="space-x-4">
-        <time>[<%= article.date.strftime('%b %e %Y') %>]</time>
-        <%= link_to article.title, article.url %>
-    </li>
-  <% end %>
-</ul>
+<%= partial "partials/article_list" %>

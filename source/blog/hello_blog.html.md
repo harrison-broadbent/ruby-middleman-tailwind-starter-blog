@@ -103,11 +103,7 @@ Towards the start of `config.rb` you'll see this:
 
 ```ruby
 activate :blog do |blog|
-  blog.prefix = "blog" 				# directory prefix
-  blog.sources = "{title}.html" 	# filename glob
-  blog.default_extension = ".md" 	# file extension
-  blog.layout = "markdown_layout" 	# layout from source/layouts
-  blog.permalink = "{title}.html"   # format of the URLs middleman generates
+  ...
 end
 ```
 
