@@ -15,7 +15,7 @@ A Middleman blog template configured with TailwindCSS, markdown parsing, code hi
 - Perfect [100/100 PageSpeed score](https://pagespeed.web.dev/analysis/https-main--ruby-middleman-tailwind-starter-blog-netlify-app/o3pfqkngtp?form_factor=desktop) (near perfect for mobile)
 - Github Action for image compression (see `compress_images.yml`).
 
-Visit the [live template demo](https://main--ruby-middleman-tailwind-starter-blog.netlify.app/) for a preview of how it looks (although of course, you can customize it yourself).
+Visit the [live template demo](https://ruby-middleman-tailwind-starter-blog.netlify.app/) for a preview of how it looks (although of course, you can customize it yourself).
 
 I've used [Middleman](https://middlemanapp.com/) for years to build my personal website, and this template is a consolidation of everything I've learned.
 
