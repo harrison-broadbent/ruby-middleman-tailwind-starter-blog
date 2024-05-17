@@ -51,6 +51,8 @@ set :markdown,                      # config for :kramdown
 
 #-------------#
 
+# You can enable these if you want, but some static hosts already do this for you
+#
 # configure :build do
 #   activate :minify_css
 #   activate :minify_javascript, compressor: Terser.new

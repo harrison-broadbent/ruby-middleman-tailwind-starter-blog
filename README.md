@@ -28,8 +28,10 @@ Before you get started, make sure you've got Ruby installed. Currently, this tem
 Clone this template, then install the required packages and start the server:
 
 ```sh
-bundle   # install packages
-bin/dev  # start dev server
+bundle   		# install Ruby packages
+npm install	# install tailwindcss
+
+bin/dev  		# start dev server
 ```
 
 ## Deploying
