@@ -1,5 +1,7 @@
 # Ruby Middleman Tailwind Starter Blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1d340bcd-8b88-47db-b12d-e83d2ac350ef/deploy-status)](https://app.netlify.com/sites/ruby-middleman-tailwind-starter-blog/deploys)
+
 A Middleman blog template configured with TailwindCSS, markdown parsing, code highlighting, a sitemap.xml and more. It perfect for lightweight blogging or a personal website. Ruby knowledge is helpful, but not necessary.
 
 ## Features
