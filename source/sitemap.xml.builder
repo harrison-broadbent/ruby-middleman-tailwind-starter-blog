@@ -1,4 +1,4 @@
-site_url = "https://main--ruby-middleman-tailwind-starter-blog.netlify.app"
+site_url = config.site_url
 
 xml.instruct!
 xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
