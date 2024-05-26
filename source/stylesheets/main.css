@@ -24,14 +24,18 @@ a {
 	we target .prose p code, rather than using prose-code:, so that we
 	only format inline code blocks.
 */
-.prose p code::before {
+.prose p code::before,
+.prose li code::before {
   content: "";
 }
 
-.prose p code::after {
+.prose p code::after,
+.prose li code::after {
   content: "";
 }
-.prose p code {
+
+.prose p code,
+.prose li code {
   @apply bg-stone-100 rounded-md py-0.5 px-1.5 border text-stone-800 font-semibold;
 }
 
