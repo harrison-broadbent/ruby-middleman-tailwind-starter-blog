@@ -15,9 +15,9 @@ A Middleman blog template configured with TailwindCSS, markdown parsing, code hi
 - Perfect 100/100 PageSpeed score (near perfect for mobile)
 - Github Action for image compression (see `compress_images.yml`).
 
-Visit the [live template demo](ruby-middleman-tailwind-starter-blog-3sl96oa0w.vercel.app) for a preview of how it looks (although of course, you can customize it yourself).
+Visit the [live template demo](https://ruby-middleman-tailwind-starter-bl-harrison-broadbents-projects.vercel.app/) for a preview of how it looks (although of course, you can customize it yourself).
 
-I've used [Middleman](https://middlemanapp.com/) for years to build my personal website, and this template is a consolidation of everything I've learned.
+I've used [Middleman](https://middlemanapp.com/) for years to build my [personal website](https://harrisonbroadbent.com/about), and this template consolidates everything I've learned.
 
 ## Getting started
 
@@ -26,9 +26,9 @@ Before you get started, make sure you've got Ruby installed. Currently, this tem
 Clone this template, then install the required packages and start the server:
 
 ```sh
-# install Ruby packages & tailwindcss
-bundle
-npm install
+# install packages
+bundle        # Ruby
+npm install   # JS (only for TailwindCSS)
 
 # start dev server
 bin/dev
