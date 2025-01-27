@@ -5,7 +5,7 @@ A Middleman blog template configured with TailwindCSS, markdown parsing, code hi
 ## Features
 
 - Middleman v4.5,
-- TailwindCSS v3.4.10,
+- TailwindCSS v4.0,
 - Markdown support (via `kramdown`),
 - Blogging support (via `middleman-blog`),
 - Syntax highlighting support (via `middleman-syntax`),
