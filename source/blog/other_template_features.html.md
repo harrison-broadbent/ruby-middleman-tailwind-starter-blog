@@ -23,7 +23,7 @@ To start everthing locally, just run `bin/dev`. This will launch the processes i
 # Procfile.dev
 
 server: middleman server
-css: npx tailwindcss -i ./source/stylesheets/main.css -o ./source/stylesheets/tailwind.css --watch
+css: npx @tailwindcss/cli -i ./source/stylesheets/main.css -o ./source/stylesheets/tailwind.css --watch
 ```
 
 ## TailwindCSS

@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
 
 a {
   @apply underline text-stone-600 hover:text-stone-500 after:content-['_↗'];
@@ -36,7 +35,7 @@ a {
 
 .prose p code,
 .prose li code {
-  @apply bg-stone-100 rounded-md py-0.5 px-1.5 border text-stone-800 font-semibold;
+  @apply bg-stone-100 rounded-md py-0.5 px-1.5 border border-stone-200 text-stone-800 font-semibold;
 }
 
 .prose blockquote ::before {
