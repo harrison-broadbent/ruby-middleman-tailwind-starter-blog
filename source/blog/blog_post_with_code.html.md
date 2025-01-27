@@ -26,6 +26,15 @@ end
 hello("world!")
 ```
 
+```python
+# python
+#
+def hello(str):
+    print('hello, ', str)
+
+hello('world!')
+```
+
 ```c
 // c
 //
