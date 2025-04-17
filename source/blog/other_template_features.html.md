@@ -26,11 +26,13 @@ server: middleman server
 css: npx @tailwindcss/cli -i ./source/stylesheets/main.css -o ./source/stylesheets/tailwind.css --watch
 ```
 
-## TailwindCSS
+## Tailwind CSS v4.1
 
 [TailwindCSS](https://tailwindcss.com/) is included in this template natively. You'll need `nodejs` / `npx` available to install and run it locally.
 
-Within `tailwind.config.js` I've configured TailwindCSS with the correct `content:` paths to parse the files in this template. I've also included the `typography` plugin for rendering markdown (once parsed into HTML via kramdown) using the `prose` class in the `markdown_layout.erb`.
+With Tailwind v4, we simply run Tailwind from the command line in the `Procfile.dev`, and it automatically rebuilds the stylesheet when anything changes.
+
+Tailwind CSS includes the `typography` plugin for rendering markdown (once parsed into HTML via kramdown) using the `prose` class in the `markdown_layout.erb`.
 
 ```erb
 <%# layouts/markdown_layout.erb %>
@@ -59,7 +61,7 @@ Everything should just work. When you save a file locally, the Middleman develop
 
 The `directory_indexes` extension is used for [pretty URLs](https://middlemanapp.com/advanced/pretty-urls/). With this activated, the URL paths Middleman generates look like `/blog` and `/about`, rather than `/blog.html` and `/about.html`.
 
-## Sitemaps
+## Sitemap & RSS feed
 
 I've included a sitemap at `source/sitemap.xml.builder`. This uses the `builder` gem to automatically generate a sitemap for your site:
 
@@ -76,3 +78,23 @@ end
 ```
 
 Make sure you update `site_url` to match the production URL of your website. You can preview your sitemap at `localhost:4567/sitemap.xml`.
+
+A similar file exists for your RSS feed, located in `source/feed.xml.builder`. It builds a valid RSS feed and renders it at `/feed.xml`.
+
+```ruby
+
+posts = blog.articles.sort_by(&:date).reverse
+
+xml.instruct! :xml, version: "1.0", encoding: "utf-8"
+xml.rss version: "2.0" do
+  xml.channel do
+    ...
+
+    posts.each do |post|
+      ...
+    end
+  end
+end
+```
+
+> If you interested in the `builder` gem and creating this RSS feed, I've written more about it here — [Add an RSS feed to your Middleman blog (harrisonbroadbent.com)](https://harrisonbroadbent.com/blog/middleman-rss-feed/)

@@ -1,13 +1,14 @@
 # Template config
 #
-set :site_url, "https://ruby-middleman-tailwind-starter-blog.netlify.app/" # for sitemap.xml.builder
-set :site_title, "Ruby+Middleman+Tailwind Starter Kit"                     # site title for <title> meta tag
+set :site_url, "https://ruby-middleman-tailwind-starter-blog.pages.dev" # for sitemap.xml.builder
+set :site_title, "Ruby, Middleman & Tailwind Starter Kit"                     # site title for <title> meta tag
 set :trailing_slash, false                                                 # turn site.com/home/ -> site.com/home
 
 # Extensions
 #
 activate :livereload                # live-reloading in dev
 activate :directory_indexes         # for pretty URLs
+activate :asset_hash          	    # hash assets for better caching
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
