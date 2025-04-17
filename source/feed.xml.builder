@@ -4,16 +4,17 @@ title = config.site_title
 desc = "[your site description here]"
 
 # All posts in reverse‑chronological order
-posts = blog("blog").articles.sort_by(&:date).reverse
+posts = blog.articles.sort_by(&:date).reverse
 
 xml.instruct! :xml, version: "1.0", encoding: "utf-8"
-xml.rss version: "2.0" do
+xml.rss version: "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
   xml.channel do
     xml.title title
     xml.link site_url
     xml.description desc
     xml.language "en-us"
     xml.lastBuildDate(posts.first.date.to_time.rfc2822) if posts.any?
+    xml.tag!("atom:link", href: "#{site_url}/feed.xml", rel: "self", type: "application/rss+xml")
 
     posts.each do |post|
       xml.item do
