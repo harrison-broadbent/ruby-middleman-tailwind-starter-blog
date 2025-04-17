@@ -5,8 +5,6 @@ description: Information about the ruby-middleman-tailwind-starter-blog project 
 
 # About this template (and the author)
 
-![Profile picture of the author (me!)](https://harrisonbroadbent.com/images/profile.jpg){:class="w-36"}_↑ That's me! ↑_
-
 Hi — I'm Harrison, the author of this template. I've used [Middleman](https://middlemanapp.com/) for years to build my [personal site](https://harrisonbroadbent.com/about), and I figured it was time I shared what I've learned.
 
 Is Middleman dying? [Probably.](https://github.com/middleman/middleman/tags) Is it a good choice for your personal site / blog? Maybe? Do I love it as a lightweight framework for building a simple static site and a lightweight blog? Absolutely.
