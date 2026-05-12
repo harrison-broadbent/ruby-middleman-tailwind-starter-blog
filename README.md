@@ -42,6 +42,7 @@ This template is easy to deploy. Any static site host should work; I've included
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cloudflare | [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/harrison-broadbent/ruby-middleman-tailwind-starter-blog)    |
 | Netlify    | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/harrison-broadbent/ruby-middleman-tailwind-starter-blog) |
-| Vercel     | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fharrison-broadbent%2Fruby-middleman-tailwind-starter-blog)              |
+| Vercel     | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fharrison-broadbent%2Fruby-middleman-tailwind-starter-blog)
+[![Deploy to PandaStack](https://dashboard.pandastack.io/deploy-button.svg)](https://dashboard.pandastack.io/deploy?repo=harrison-broadbent/ruby-middleman-tailwind-starter-blog&type=static&buildCmd=npm+run+build&outputDir=dist)              |
 
 > Note: These days, I use Cloudflare hosting and I heartily recommend them. I [switched from Netlify to Cloudflare](https://harrisonbroadbent.com/blog/goodbye-netlify-hello-cloudflare/) a while ago and haven't looked back.
