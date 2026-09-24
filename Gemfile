@@ -3,7 +3,6 @@ source "https://rubygems.org"
 # Standard Middleman Gems:
 #
 gem "middleman", "~> 4.6"
-gem "middleman-autoprefixer", "~> 3.0"
 gem "middleman-blog", "~> 4.0.3"    # blog support
 gem "middleman-livereload"          # live dev reloading
 
