@@ -17,20 +17,20 @@ Here's a breakdown of the handy features I've included in this template.
 
 Similar to Ruby on Rails, I've included a `Procfile.dev` and `bin/dev` script in this template. The `Procfile.dev` is handy for running multiple processes (since we need to run both `middleman server` and the `tailwindcss` parser).
 
-To start everthing locally, just run `bin/dev`. This will launch the processes in the `Procfile.dev` (you can add your own processes here):
+To start everything locally, just run `bin/dev`. This will launch the processes in the `Procfile.dev` (you can add your own processes here):
 
 ```sh
 # Procfile.dev
 
 server: middleman server
-css: npx @tailwindcss/cli -i ./source/stylesheets/main.css -o ./source/stylesheets/tailwind.css --watch
+css: npm run watch:css
 ```
 
-## Tailwind CSS v4.1
+## Tailwind CSS v4
 
-[TailwindCSS](https://tailwindcss.com/) is included in this template natively. You'll need `nodejs` / `npx` available to install and run it locally.
+[TailwindCSS](https://tailwindcss.com/) is included in this template natively. You'll need `nodejs` / `npm` available to install and run it locally.
 
-With Tailwind v4, we simply run Tailwind from the command line in the `Procfile.dev`, and it automatically rebuilds the stylesheet when anything changes.
+With Tailwind v4, we simply run the Tailwind CLI (via the `watch:css` script in `package.json`) from the `Procfile.dev`, and it automatically rebuilds the stylesheet when anything changes.
 
 Tailwind CSS includes the `typography` plugin for rendering markdown (once parsed into HTML via kramdown) using the `prose` class in the `markdown_layout.erb`.
 
@@ -57,7 +57,7 @@ activate :syntax                    # code highlighting
 ...
 ```
 
-Everything should just work. When you save a file locally, the Middleman development server will automatically reload. Syntax highlighting should work without any configuration (see [blog/blog_post_with_code](blog/blog_post_with_code) for more info).
+Everything should just work. When you save a file locally, the Middleman development server will automatically reload. Syntax highlighting should work without any configuration (see [A blog post with some code](/blog-post-with-code) for more info).
 
 The `directory_indexes` extension is used for [pretty URLs](https://middlemanapp.com/advanced/pretty-urls/). With this activated, the URL paths Middleman generates look like `/blog` and `/about`, rather than `/blog.html` and `/about.html`.
 
@@ -79,14 +79,14 @@ end
 
 Make sure you update `site_url` to match the production URL of your website. You can preview your sitemap at `localhost:4567/sitemap.xml`.
 
-A similar file exists for your RSS feed, located in `source/feed.xml.builder`. It builds a valid RSS feed and renders it at `/feed.xml`.
+A similar file exists for your RSS feed, located in `source/feed.xml.builder`. It builds a valid RSS feed (including the full content of each post) and renders it at `/feed.xml`. Every page also links to it with a `<link rel="alternate">` tag, so feed readers can discover it automatically.
 
 ```ruby
-
-posts = blog.articles.sort_by(&:date).reverse
+# blog.articles is already sorted newest-first
+posts = blog.articles
 
 xml.instruct! :xml, version: "1.0", encoding: "utf-8"
-xml.rss version: "2.0" do
+xml.rss version: "2.0", ... do
   xml.channel do
     ...
 
