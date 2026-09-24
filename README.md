@@ -2,7 +2,7 @@
 
 Live demo: [Ruby, Middleman & Tailwind starter blog](https://ruby-middleman-tailwind-starter-blog.pages.dev)
 
-A Middleman blog template configured with TailwindCSS, markdown parsing, code highlighting, a sitemap.xml and more. It perfect for lightweight blogging or a personal website. Ruby knowledge is helpful, but not necessary.
+A Middleman blog template configured with TailwindCSS, markdown parsing, code highlighting, a sitemap.xml and more. It's perfect for lightweight blogging or a personal website. Ruby knowledge is helpful, but not necessary.
 
 ## Features
 

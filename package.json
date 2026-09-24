@@ -1,6 +1,12 @@
 {
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./source/stylesheets/main.css -o ./source/stylesheets/tailwind.css --optimize",
+    "watch:css": "tailwindcss -i ./source/stylesheets/main.css -o ./source/stylesheets/tailwind.css --optimize --watch"
+  },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/typography": "^0.5.13",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.3.3"
   }
 }
