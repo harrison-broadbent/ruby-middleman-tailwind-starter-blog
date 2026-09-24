@@ -183,6 +183,9 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .static {
     position: static;
   }
@@ -718,16 +721,15 @@
 a {
   color: var(--color-stone-600);
   text-decoration-line: underline;
-  &::after {
-    content: var(--tw-content);
-    --tw-content: ' ↗';
-    content: var(--tw-content);
-  }
   &:hover {
     @media (hover: hover) {
       color: var(--color-stone-500);
     }
   }
+}
+a[href^="http"]::after {
+  --tw-content: ' ↗';
+  content: var(--tw-content);
 }
 #prose-content {
   text-wrap: pretty;
@@ -769,17 +771,8 @@ a {
   font-weight: var(--font-weight-semibold);
   color: var(--color-stone-800);
 }
-.prose blockquote ::before {
-  content: "";
-}
-.prose blockquote ::after {
-  content: "";
-}
-.prose blockquote * ::before {
-  content: "";
-}
-.prose blockquote * ::after {
-  content: "";
+.prose blockquote {
+  quotes: none;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
