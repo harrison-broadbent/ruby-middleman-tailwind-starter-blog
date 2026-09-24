@@ -1,12 +1,11 @@
-<% @meta_tags = {
-    title: "#{current_page.data.title} · #{config.site_title}" || config.site_title,
-    description: current_page.data.description,
-  } %>
+<%
+  title = [current_page.data.title, config.site_title].compact.join(" · ")
+  description = current_page.data.description || config.site_description
+%>
 <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><%= @meta_tags[:title] %></title>
-<meta name="title" content="<%= @meta_tags[:title] %>" />
-<meta name="description" content="<%= @meta_tags[:description] %>" />
+<title><%= h title %></title>
+<meta name="description" content="<%= h description %>" />
 <link rel="canonical" href="<%= config.site_url %><%= current_page.url %>" />
+<link rel="alternate" type="application/rss+xml" title="<%= h config.site_title %>" href="/feed.xml" />
 <%= favicon_tag "images/favicon.ico" %>
