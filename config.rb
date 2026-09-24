@@ -2,6 +2,7 @@
 #
 set :site_url, "https://ruby-middleman-tailwind-starter-blog.pages.dev" # for sitemap.xml.builder
 set :site_title, "Ruby, Middleman & Tailwind Starter Kit"                     # site title for <title> meta tag
+set :site_description, "A Middleman blog template with TailwindCSS."           # fallback meta description, and RSS feed description
 set :trailing_slash, false                                                 # turn site.com/home/ -> site.com/home
 
 # Extensions
@@ -9,18 +10,18 @@ set :trailing_slash, false                                                 # tur
 activate :livereload                # live-reloading in dev
 activate :directory_indexes         # for pretty URLs
 activate :asset_hash          	    # hash assets for better caching
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+
+# main.css is the Tailwind input file, compiled into tailwind.css (see Procfile.dev)
+ignore "stylesheets/main.css"
 
 activate :blog do |blog|
+  # blog.prefix = "blog" 						  # enable this to put your URLs in a sub-path like site.com/blog/article-name
   blog.layout = "markdown_layout"    # layout from source/layouts
   blog.sources = "blog/{title}.html" # filename glob
   blog.permalink = "{title}.html"    # format of the URLs middleman generates
   blog.default_extension = ".md" 		 # file extension
-  blog.publish_future_dated = true   # by default only builds posts with future dates
-  blog.new_article_template = File.expand_path("../source/template.erb", __FILE__)
-  # blog.prefix = "blog" 						  # enable this to put your URLs in a sub-path like site.com/blog/article-name
+  blog.publish_future_dated = false  # future-dated posts are drafts. they're visible in dev, but excluded from builds
+  blog.new_article_template = File.expand_path("templates/article.erb", __dir__)
 end
 
 # Middleman doesn't support per-filetype layouts.
